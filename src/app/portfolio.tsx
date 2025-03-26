@@ -9,8 +9,8 @@ import { IconButton, Box } from "@mui/material";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 export default function PortofolioCard() {
    const images = ["/1.jpg", "/2.jpg", "/3.jpg"];
-   const imgTapMm = ["/tapmm/fmr.png","/tapmm/mcrf.png","/tapmm/mtc.png"]
-   const imgEproc = ["/eproc/po.png","/eproc/cbe-draft.png","/eproc/blast-email.png"]
+   const imgTapMm = ["/tapmm/fmr.PNG","/tapmm/mcrf.PNG","/tapmm/mtc.PNG"]
+   const imgEproc = ["/eproc/po.PNG","/eproc/cbe-draft.PNG","/eproc/blast-email.PNG"]
    const imgInagro = ["/inagro/1.png","/inagro/2.png","/inagro/3.png"]
    const CarouselCard: React.FC<{ imgUrl: string[] }> = ({ imgUrl }) => {
       const [currentIndex, setCurrentIndex] = useState(0);
@@ -86,7 +86,7 @@ export default function PortofolioCard() {
             variant="h4"
             component="div"
             color="black"
-            sx={{ marginBottom: 2 }}>
+            sx={{ marginBottom: 2 ,marginTop:2}}>
             PORTFOLIO
          </Typography>
          <div className="flex">
