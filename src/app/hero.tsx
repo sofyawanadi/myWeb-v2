@@ -1,5 +1,9 @@
 import StatsSection from "./stats";
+import Image from "next/image";
 export default function Hero() {
+   const handleDownloadCv = () => {
+      window.open("/cv.pdf", "_blank");
+   };
    return (
       <div
          id="Hero"
@@ -23,9 +27,7 @@ export default function Hero() {
                   </p>{" "}
                   <button
                      className="mt-6 px-6 py-2 bg-green-400 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
-                     onClick={() => {
-                        window.open("/cv.pdf"), "_blank";
-                     }}>
+                     onClick={handleDownloadCv}>
                      Download CV
                   </button>
                </div>
@@ -33,11 +35,18 @@ export default function Hero() {
 
             {/* Bagian Kanan */}
             <div className="flex justify-center">
-               <img
+               <Image
                   src="/test3.jpg"
+                  width={500}
+                  height={500}
                   alt="Hero Illustration"
                   className="w-3/5 max-w-sm md:max-w-md lg:max-w-lg rounded-full object-cover border border-dashed bg-white p-2 shadow-lg"
                />
+               {/* <img
+                  src="/test3.jpg"
+                  alt="Hero Illustration"
+                  className="w-3/5 max-w-sm md:max-w-md lg:max-w-lg rounded-full object-cover border border-dashed bg-white p-2 shadow-lg"
+               /> */}
             </div>
          </div>
          <StatsSection />
